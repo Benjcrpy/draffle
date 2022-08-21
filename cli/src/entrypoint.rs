@@ -30,10 +30,11 @@ pub struct ConfigOverride {
     #[clap(
         global = true,
         long = "program-id",
-        default_value = "dRaFFLe111111111111111111111111111111111112"
+        default_value = "rafQbXM9VpPV9hr9NqNHuGECBhwNkbLvXt8VS31zbp4"
     )]
     pub program_id: String,
 }
+
 
 #[derive(Debug, Parser)]
 pub enum Command {
@@ -82,7 +83,7 @@ pub struct Opts {
 pub fn entry(opts: Opts) -> Result<()> {
     let wallet = match opts.cfg_override.wallet {
         Some(wallet) => wallet,
-        None => shellexpand::tilde("~/.config/solana/id.json").to_string(),
+        None => shellexpand::tilde("DePSWB4sds9fprQHDA5Mnn6LGkYH4p329FRNKrZd1DMJ.json").to_string(),
     };
 
     // Client setup
@@ -91,8 +92,8 @@ pub fn entry(opts: Opts) -> Result<()> {
     let url = match opts.cfg_override.cluster {
         Some(cluster) => cluster,
         None => Cluster::Custom(
-            "http://localhost:8899".to_string(),
-            "ws://127.0.0.1:8900".to_string(),
+            "https://api.devnet.solana.com".to_string(),
+            "wss://api.devnet.solana.com/".to_string(),
         ),
     };
     let client = Client::new_with_options(url, Rc::new(payer), CommitmentConfig::processed());
@@ -275,7 +276,6 @@ fn add_prize(
             amount: prize_amount,
         })
         .send()?;
-
     Ok(())
 }
 

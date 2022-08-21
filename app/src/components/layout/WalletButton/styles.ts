@@ -4,9 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 export const useStyles = makeStyles<Theme>((theme: Theme) => ({
   walletConnectButton: {
     width: '100%',
-    backgroundColor: 'transparent',
-    borderColor: theme.palette.common.white,
-    boxShadow: '0 0 5px 2px #e86bff, inset 0 0 10px 0px #e86bff',
+    backgroundColor: 'Cyan',
+    borderColor: '#f8d091',
     color: theme.palette.common.white,
     '&:hover': {
       backgroundColor: alpha(theme.palette.primary.main, 0.2),
@@ -16,9 +15,8 @@ export const useStyles = makeStyles<Theme>((theme: Theme) => ({
   walletDisconnectButton: {
     width: '100%',
     backgroundColor: 'transparent',
-    borderColor: theme.palette.common.white,
-    boxShadow: `0 0 5px 2px ${theme.palette.secondary.main}, inset 0 0 10px 0px ${theme.palette.secondary.main}`,
-    color: theme.palette.common.white,
+    borderColor: '#f8d091',
+    color: '#f8d091',
     '&:hover': {
       backgroundColor: alpha(theme.palette.secondary.main, 0.2),
       borderColor: theme.palette.common.white,

@@ -43,7 +43,7 @@ const ExploreRafflesScreen: FC = () => {
     return (
       <>
         <Typography variant="h1" className={classes.titleBar}>
-          Explore dRaffles
+          Hiraeth Raffle
         </Typography>
         <div className={classes.mainContent}>
           <CircularProgress color="secondary" />
@@ -55,10 +55,10 @@ const ExploreRafflesScreen: FC = () => {
     return (
       <>
         <Typography variant="h1" className={classes.titleBar}>
-          Explore dRaffles
+          Hiraeth Raffles
         </Typography>
         <Typography variant="h4" className={classes.mainContent}>
-          dRaffles will be coming soon!
+          Hiraeth Raffle will be coming soon!
         </Typography>
       </>
     );
@@ -66,7 +66,7 @@ const ExploreRafflesScreen: FC = () => {
   return (
     <>
       <Typography variant="h1" className={classes.titleBar}>
-        Explore dRaffles
+        NFT RAFFLES
       </Typography>
       <FilterBar
         hideEndedRaffles={hideEndedRaffles}

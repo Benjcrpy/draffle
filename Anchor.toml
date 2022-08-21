@@ -2,10 +2,16 @@ anchor_version = "0.17.0"
 
 [provider]
 cluster = "mainnet"
-wallet = "~/.config/solana/id.json"
+wallet = "DePSWB4sds9fprQHDA5Mnn6LGkYH4p329FRNKrZd1DMJ.json"
 
 [programs.mainnet]
-draffle = "dRafA7ymQiLKjR5dmmdZC9RPX4EQUjqYFB3mWokRuDs"
+draffle = "rafQbXM9VpPV9hr9NqNHuGECBhwNkbLvXt8VS31zbp4"
+
+[programs.devnet]
+draffle = "rafQbXM9VpPV9hr9NqNHuGECBhwNkbLvXt8VS31zbp4"
 
 [scripts]
 test = "mocha -t 1000000 tests"
+
+[registry]
+url = "https://anchor.projectserum.com"

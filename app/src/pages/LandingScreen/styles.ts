@@ -24,8 +24,8 @@ export const useStyles = makeStyles<Theme, { device: DeviceType }>(
       margin: device === DeviceType.Phone ? '0 5px' : '0 20px',
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
+      justifyContent: 'right',
+      alignItems: 'right',
     }),
     socialLink: {
       height: '100%',

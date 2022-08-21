@@ -16,13 +16,13 @@ import { clusterApiUrl } from '@solana/web3.js';
 import toast from 'react-hot-toast';
 
 enum Extension {
-  Localnet = 'localnet',
+  Localnet = 'devnet',
 }
 
 const extendedClusterApiUrl = (network: WalletAdapterNetwork | Extension) => {
   return network === Extension.Localnet
     ? (process.env.REACT_APP_RPC_ENDPOINT as string) ||
-        'https://draffle.ngrok.io'
+        'https://api.devnet.solana.com'
     : clusterApiUrl(network);
 };
 

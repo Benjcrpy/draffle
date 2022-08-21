@@ -25,6 +25,8 @@ async fn test_raffle() {
     // Fungible
     let second_prize_mint_keypair = Keypair::new();
 
+    let discord_id = ();
+
     let program_id = draffle_program_test.program_id;
     let payer_pk = draffle_program_test.context.payer.pubkey();
 

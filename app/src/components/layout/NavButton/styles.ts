@@ -4,7 +4,7 @@ import { makeStyles, darken } from '@material-ui/core/styles';
 export const useStyles = makeStyles<Theme, { isCurrent: boolean }>(
   (theme: Theme) => ({
     navButtons: ({ isCurrent }) => ({
-      fontSize: '16px',
+      fontSize: '20px',
       color: isCurrent
         ? darken(theme.palette.secondary.main, 0.1)
         : theme.palette.primary.main,

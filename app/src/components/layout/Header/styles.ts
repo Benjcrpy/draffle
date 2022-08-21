@@ -20,10 +20,11 @@ export const useStyles = makeStyles<Theme, { device: DeviceType }>(
       height: device === DeviceType.Phone ? '50px' : '90px',
       display: 'flex',
       flexDirection: 'row',
+      fontWeight: 'bold',
       justifyContent: 'space-between',
-      backgroundColor: 'rgba(6,18,98,1)',
+      backgroundColor: 'rgba(30,42,59)',
       alignItems: 'center',
-      boxShadow: '0 0 10px 0 #000',
+  
       zIndex: 99,
     }),
     navContainer: {
@@ -42,7 +43,6 @@ export const useStyles = makeStyles<Theme, { device: DeviceType }>(
       marginLeft: '30px',
       color: theme.palette.primary.main,
       '&:hover': {
-        textShadow: '0px 0px 5px #e86bff',
         backgroundColor: 'transparent',
       },
     },
@@ -52,6 +52,7 @@ export const useStyles = makeStyles<Theme, { device: DeviceType }>(
     },
     walletButtonContainer: {
       marginLeft: '20px',
+      backgroundColor: '#f8d091',
     },
     currentLocation: {
       color: 'black',

@@ -22,5 +22,6 @@ export const useStyles = makeStyles<Theme>((theme: Theme) => ({
   },
   walletButtonContainer: {
     margin: '20px 0 0 0',
+    backgroundColor: '#f8d091',
   },
 }));

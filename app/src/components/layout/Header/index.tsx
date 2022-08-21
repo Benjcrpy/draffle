@@ -7,13 +7,11 @@ import { useHistory } from 'react-router-dom';
 
 import { useStyles } from './styles';
 import { routes } from '../../../router/routes';
-import AirdropButton from '../../AirdropButton';
 import { useViewport } from '../../../hooks/useViewport';
 import { DeviceType } from '../../../providers/ViewportProvider';
 import Drawer from '../Drawer';
 import WalletButton from '../WalletButton';
 import NavButton from '../NavButton';
-import { TESTING } from '../../../config/misc';
 import { isAdmin } from '../../AdminRoute';
 
 export interface HeaderProps {
@@ -21,17 +19,15 @@ export interface HeaderProps {
 }
 
 const NAV_LINKS_LIST = [
-  { label: 'Home', target: routes.HOME },
-  { label: 'Explore', target: routes.RAFFLES },
-  { label: 'Stake', target: routes.STAKE },
-  { label: 'Tools', target: routes.TOOLS },
+  { label: "Home", target: routes.HOME},
+  { label: 'Raffle', target: routes.RAFFLES},
   { label: 'Admin Panel', target: routes.ADMIN.HOME, admin: true },
 ];
 
 const Header: FC<HeaderProps> = ({ onBackNavigation }) => {
   const { device } = useViewport();
   const classes = useStyles({ device });
-  const { connected, publicKey } = useWallet();
+  const { publicKey } = useWallet();
   const { push, location } = useHistory();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -40,9 +36,9 @@ const Header: FC<HeaderProps> = ({ onBackNavigation }) => {
       <div
         style={{
           width: '100%',
+          fontWeight: 'bold',
           height: device === DeviceType.Phone ? '50px' : '90px',
-          background:
-            'linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2))',
+          background:'rgb(rgba (30, 42, 59))',
           backdropFilter: 'blur(3px)',
           zIndex: 98,
         }}
@@ -77,7 +73,7 @@ const Header: FC<HeaderProps> = ({ onBackNavigation }) => {
                 className={classes.homeButton}
               >
                 <img
-                  src="/dRaffle-LC-banner.png"
+                  src="/Hiraeth.jpeg"
                   alt={'Site banner'}
                   className={classes.homeButtonIcon}
                 />
@@ -95,7 +91,7 @@ const Header: FC<HeaderProps> = ({ onBackNavigation }) => {
                   style={{ marginRight: '20px' }}
                 />
               ))}
-              {connected && TESTING && <AirdropButton />}
+             
               <div className={classes.walletButtonContainer}>
                 <WalletButton />
               </div>

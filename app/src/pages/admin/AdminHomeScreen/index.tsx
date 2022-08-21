@@ -53,7 +53,7 @@ const AdminHomeScreen: FC = () => {
               alignItems: 'center',
             }}
           >
-            <Typography variant="h3">Dispensers</Typography>
+            <Typography variant="h3">Dispenser</Typography>
             <IconButton
               size={'small'}
               onClick={() => {

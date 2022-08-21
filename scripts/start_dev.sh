@@ -35,7 +35,7 @@ solana-test-validator \
 --quiet --reset &
 
 echo "Setting cluster to localnet..."
-solana config set --url http://127.0.0.1:8899
+solana config set --url https://api.devnet.solana.com
 echo "Done"
 
 # Wait for test validator to be ready
